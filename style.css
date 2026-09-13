@@ -403,7 +403,12 @@ body.lang-hi .side-kids-label {
 }
 
 .date-pill-item i, .date-pill-item span.icon {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+}
+
+.gold-pill-icon {
+  color: var(--gold-2);
+  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.6));
 }
 
 .date-pill-divider {

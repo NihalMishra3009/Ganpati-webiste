@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>॥ श्री गणेशाय नमः ॥ Ganesh Utsav Invitation</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="॥ श्री गणेशाय नमः ॥ Ganesh Utsav Invitation">
+  <meta name="description" content="Auspicious Ganesh Chaturthi Invitation - Join us to welcome Lord Ganesha with warmth, prayers, and blessings.">
+
+  <!-- Google Fonts: Festive typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@300;400;500;600;700&family=Tiro+Devanagari+Marathi:ital@0;1&family=Yatra+One&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons for festive elements -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Leaflet CSS for Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-mr">
+
+  <!-- Floating Canvas Particles -->
+  <canvas id="particles-canvas"></canvas>
+  <div class="bg-mandala-overlay"></div>
+
+  <!-- Top Sticky Navigation Bar -->
+  <nav class="top-navbar" id="topNav">
+    <div class="brand-om" id="brandHeader">
+      <span class="om-gold-symbol">ॐ</span> <span data-i18n="brandText">श्री गणेशाय नमः</span>
+    </div>
+    <div class="lang-switcher" aria-label="Language Selector">
+      <button class="lang-btn active" data-lang="mr" id="btn-lang-mr">मराठी</button>
+      <button class="lang-btn" data-lang="hi" id="btn-lang-hi">हिंदी</button>
+      <button class="lang-btn" data-lang="en" id="btn-lang-en">English</button>
+    </div>
+  </nav>
+
+  <!-- Main Content Wrapper -->
+  <main class="page-container">
+
+    <!-- HERO SECTION (Left Kids Photo + Center Ganpati Idol) -->
+    <section class="hero-section reveal-on-scroll">
+      <!-- Auspicious Vedic Shloka -->
+      <div class="shlok-banner" data-i18n="shlokBanner">
+        ॥ वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ । निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
+      </div>
+
+      <!-- Hero Visual Stage (Side-by-Side: Ganpati Idol on Left + Kids Photo on Right) -->
+      <div class="hero-visual-stage">
+        <!-- Center/Left: Centerpiece Idol with Golden Arch Prabhavali Glow -->
+        <div class="idol-stage">
+          <div class="prabhavali-glow"></div>
+          <div class="prabhavali-arch"></div>
+          <div class="idol-image-wrapper">
+            <img src="assets/ganpati_idol.png" alt="Real Bal Ganesh Idol" class="idol-img" id="hero-ganpati-img" />
+          </div>
+        </div>
+
+        <!-- Right Side: Children / Hosts Cutout -->
+        <div class="side-kids-container">
+          <div class="side-kids-glow"></div>
+          <div class="side-kids-wrapper">
+            <img src="assets/kids_photo.png" alt="Shreeja and Shreejay Pawar" class="side-kids-img" />
+          </div>
+          <div class="side-kids-label">
+            <span data-i18n="kidsLabel">🌸 श्रीजा &amp; श्रीजय 🌸</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Welcome Headings -->
+      <h1 class="hero-title" data-i18n="heroTitle">
+        गणपती बाप्पा मोरया! आपले सहर्ष स्वागत आहे
+      </h1>
+      
+      <p class="hero-subtitle">
+        <span data-i18n="heroSubtitle">आम्हा सर्व पवार कुटुंबियांतर्फे आपणांस आणि आपल्या परिवारास श्री गणेशोत्सवानिमित्त हार्दिक आमंत्रण!</span>
+        <strong class="host-name-highlight" data-i18n="hostFamily">पवार परिवार (श्रीजा & श्रीजय)</strong>
+      </p>
+
+      <!-- Arrival & Immersion Date Pill -->
+      <div class="dates-pill-container">
+        <div class="date-pill-item">
+          <span class="icon">🐘</span>
+          <span data-i18n="arrivalLabel">आगमन: शनिवार, १४ सप्टेंबर २०२४ (सकाळी ९:०० वा.)</span>
+        </div>
+        <div class="date-pill-divider"></div>
+        <div class="date-pill-item">
+          <span class="icon">🌊</span>
+          <span data-i18n="visarjanLabel">विसर्जन: अनंत चतुर्दशी</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION DIVIDER -->
+    <div class="festive-divider">
+      <span class="line"></span>
+      <span class="mandala-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+        </svg>
+      </span>
+      <span class="line"></span>
+    </div>
+
+    <!-- EVENT DETAILS SECTION -->
+    <section class="details-section reveal-on-scroll" id="event-details">
+      <div class="festive-card">
+        <div class="card-heading-group">
+          <h2 class="card-title" data-i18n="detailsTitle">उत्सव कार्यक्रम व वेळ</h2>
+          <p class="card-subtext" data-i18n="detailsSub">बाप्पाच्या सेवेत व उत्सवात सहभागी व्हा</p>
+        </div>
+
+        <div class="details-grid">
+          <!-- Muhurat Card -->
+          <div class="detail-item">
+            <div class="detail-icon-box">
+              <i class="fa-solid fa-calendar-days"></i>
+            </div>
+            <div class="detail-content">
+              <h4 data-i18n="muhuratTitle">स्थापना मुहूर्त व पूजा</h4>
+              <p data-i18n="muhuratDesc">भाद्रपद शुक्ल चतुर्थी, सकाळी ०९:१५ ते दुपारी ०१:३०</p>
+            </div>
+          </div>
+
+          <!-- Venue Card -->
+          <div class="detail-item">
+            <div class="detail-icon-box">
+              <i class="fa-solid fa-house-chimney-window"></i>
+            </div>
+            <div class="detail-content">
+              <h4 data-i18n="venueTitle">उत्सव स्थळ</h4>
+              <p data-i18n="venueDesc">करण अपार्टमेंट, फ्लॅट नं. ७०१, प्लॉट नं. ८, सेक्टर १६, कळंबोली डी-मार्ट जवळ, रोडपाली, कळंबोली</p>
+            </div>
+          </div>
+
+          <!-- Mahaprasad Card -->
+          <div class="detail-item">
+            <div class="detail-icon-box">
+              <i class="fa-solid fa-bowl-rice"></i>
+            </div>
+            <div class="detail-content">
+              <h4 data-i18n="prasadTitle">महाप्रसाद</h4>
+              <p data-i18n="prasadDesc">दररोज दुपारी १:०० ते ३:०० आणि संध्याकाळी ८:०० ते १०:००</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aarti Schedule Subsection -->
+        <div class="aarti-timeline">
+          <div class="aarti-header">
+            <i class="fa-solid fa-bell"></i>
+            <span data-i18n="aartiHeader">दैनिक आरती वेळ</span>
+          </div>
+          <div class="aarti-grid">
+            <div class="aarti-badge">
+              <span class="label" data-i18n="morningAarti">सकाळची आरती</span>
+              <span class="time" data-i18n="morningAartiTime">सकाळी ०८:०० वा.</span>
+            </div>
+            <div class="aarti-badge">
+              <span class="label" data-i18n="eveningAarti">संध्याकाळची आरती</span>
+              <span class="time" data-i18n="eveningAartiTime">संध्याकाळी ०८:०० वा.</span>
+            </div>
+            <div class="aarti-badge">
+              <span class="label" data-i18n="visarjanAarti">उत्तरपूजा व महाआरती</span>
+              <span class="time" data-i18n="visarjanAartiTime">दुपारी १२:०० वा. (विसर्जन दिनी)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION DIVIDER -->
+    <div class="festive-divider">
+      <span class="line"></span>
+      <span class="mandala-icon">🪔</span>
+      <span class="line"></span>
+    </div>
+
+    <!-- INTERACTIVE MAP & DIRECTIONS SECTION -->
+    <section class="map-section reveal-on-scroll" id="venue-map">
+      <div class="festive-card">
+        <div class="card-heading-group">
+          <h2 class="card-title" data-i18n="mapTitle">स्थळ आणि मार्ग नकाशा</h2>
+          <p class="card-subtext" data-i18n="mapSub">कळंबोली डी-मार्ट जवळ आमच्या घरी पोहोचण्यासाठी नकाशा</p>
+        </div>
+
+        <div class="map-container-wrapper">
+          <div id="map"></div>
+        </div>
+
+        <div class="map-action-bar">
+          <div class="venue-address-preview">
+            <i class="fa-solid fa-location-dot"></i>
+            <span data-i18n="venueDesc">करण अपार्टमेंट, फ्लॅट नं. ७०१, प्लॉट नं. ८, सेक्टर १६, कळंबोली डी-मार्ट जवळ, रोडपाली, कळंबोली</span>
+          </div>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=19.0385,73.1008&query=Karan+Apartment+Sector+16+Roadpali+Kalamboli" target="_blank" rel="noopener noreferrer" class="btn-directions" id="btn-get-directions">
+            <i class="fa-solid fa-diamond-turn-right"></i>
+            <span data-i18n="getDirectionsBtn">गुगल मॅपवर दिशा मिळवा (Get Directions)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION DIVIDER -->
+    <div class="festive-divider">
+      <span class="line"></span>
+      <span class="mandala-icon">🪔</span>
+      <span class="line"></span>
+    </div>
+
+    <!-- CONTACT & BLESSINGS SECTION -->
+    <section class="contact-section reveal-on-scroll" id="contact-info">
+      <div class="festive-card">
+        <div class="card-heading-group">
+          <h2 class="card-title" data-i18n="contactTitle">संपर्क आणि पत्ता</h2>
+          <p class="card-subtext" data-i18n="contactSub">काही अडचण असल्यास कृपया संपर्क साधावा</p>
+        </div>
+
+        <div class="contacts-grid">
+          <!-- Host Person -->
+          <div class="contact-card-item">
+            <div class="contact-icon-ring">
+              <i class="fa-solid fa-user-group"></i>
+            </div>
+            <div class="contact-label" data-i18n="hostLabel">निमंत्रक</div>
+            <div class="contact-val" data-i18n="hostPerson">श्रीजा जयदीप पवार आणि श्रीजय जयदीप पवार</div>
+          </div>
+
+          <!-- Phone Number -->
+          <div class="contact-card-item">
+            <div class="contact-icon-ring">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-label" data-i18n="phoneLabel">संपर्क क्रमांक</div>
+            <a href="tel:+919876543210" class="contact-val">+91 98765 43210</a>
+          </div>
+
+          <!-- Full Address -->
+          <div class="contact-card-item">
+            <div class="contact-icon-ring">
+              <i class="fa-solid fa-map-pin"></i>
+            </div>
+            <div class="contact-label" data-i18n="addressLabel">पत्ता</div>
+            <div class="contact-val" data-i18n="addressShortVal" style="font-size: 0.88rem;">सेक्टर १६, रोडपाली, कळंबोली</div>
+          </div>
+        </div>
+
+        <!-- Closing Blessing Statement -->
+        <div class="closing-blessing-box">
+          <p class="closing-quote" data-i18n="closingQuote">
+            “आपली उपस्थिती आमच्यासाठी आनंदाची गोष्ट असेल. बाप्पाच्या आशीर्वादाने सर्वांचे जीवन सुख-समृद्धीने भरून जावो!”
+          </p>
+          <div class="host-closing-tag" data-i18n="hostFamily">पवार परिवार (श्रीजा & श्रीजय)</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Ambient Devotional Music Floating Widget -->
+  <div class="audio-control-widget">
+    <div class="mini-music-player" id="miniMusicPlayer">
+      <div class="music-info-panel">
+        <div class="music-track-title" id="currentTrackTitle">🎧 एकदंताय वक्रतुण्डाय (Slowed & Reverb)</div>
+        <div class="music-status-tag" id="musicStatusTag">गणेश चतुर्थी स्पेशल • Playing</div>
+      </div>
+      <div class="music-controls">
+        <button class="music-ctrl-btn play-main" id="audio-toggle-btn" title="Play / Pause Ganpati Background Music">
+          <i class="fa-solid fa-play" id="playIcon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Audio Element (Loop and Autoplay enabled) -->
+  <audio id="ganpatiAudioPlayer" src="audio/ekadantaya_vakratundaya_slowed_reverb.mp3" autoplay loop preload="auto" playsinline></audio>
+
+  <!-- Footer -->
+  <footer>
+    <span class="om-gold-symbol footer-om">ॐ</span>
+    <p data-i18n="footerBlessing">॥ गणपती बाप्पा मोरया, मंगलमूर्ती मोरया ॥</p>
+    <p data-i18n="footerSubtext" style="margin-top: 6px; font-size: 0.8rem; opacity: 0.7;">Designed with devotion for Ganeshotsav Celebrations</p>
+  </footer>
+
+  <!-- Leaflet JS Library -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- Framer Motion Library for smooth physics-based transitions & animations -->
+  <script src="https://cdn.jsdelivr.net/npm/framer-motion@11.11.17/dist/framer-motion.js"></script>
+
+  <!-- Custom Application Script -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -568,6 +568,29 @@ function initAudioExperience() {
   audioPlayer.addEventListener('play', updateUiPlaying);
   audioPlayer.addEventListener('pause', updateUiPaused);
 
+  // Welcome Modal Enter Button Interaction (Guarantees instant music initiation)
+  const welcomeOverlay = document.getElementById('welcomeOverlay');
+  const welcomeEnterBtn = document.getElementById('welcomeEnterBtn');
+
+  if (welcomeEnterBtn && welcomeOverlay) {
+    welcomeEnterBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      welcomeOverlay.classList.add('hidden');
+      setTimeout(() => {
+        welcomeOverlay.style.display = 'none';
+      }, 800);
+      playTrack();
+    });
+
+    // Also auto-dismiss if user interacts anywhere or if autoplay succeeded
+    audioPlayer.addEventListener('play', () => {
+      welcomeOverlay.classList.add('hidden');
+      setTimeout(() => {
+        welcomeOverlay.style.display = 'none';
+      }, 800);
+    }, { once: true });
+  }
+
   // Attempt instant play immediately
   playTrack();
 

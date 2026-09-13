@@ -81,6 +81,109 @@ body.lang-hi h1, body.lang-hi h2, body.lang-hi h3, body.lang-hi .gold-title {
   background-size: 40px 40px;
 }
 
+/* Auspicious Festive Welcome Entry Modal */
+.welcome-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at 50% 30%, rgba(60, 4, 10, 0.96) 0%, rgba(20, 0, 3, 0.98) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s ease;
+}
+
+.welcome-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.welcome-card {
+  background: rgba(45, 4, 10, 0.85);
+  border: 2px solid var(--gold-3);
+  border-radius: 28px;
+  padding: 40px 30px;
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 30px rgba(255, 215, 0, 0.3);
+  animation: welcomePop 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+@keyframes welcomePop {
+  0% { transform: scale(0.85); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.welcome-diya-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: pulseDiya 2s infinite alternate;
+}
+
+@keyframes pulseDiya {
+  0% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4)); }
+  100% { transform: scale(1.15); filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.9)); }
+}
+
+.welcome-om {
+  font-family: 'Yatra One', var(--font-devanagari), cursive;
+  font-size: 1.25rem;
+  color: var(--gold-2);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+}
+
+.welcome-title {
+  font-family: 'Yatra One', var(--font-devanagari), cursive;
+  font-size: 1.45rem;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.welcome-enter-btn {
+  background: var(--gold-gradient);
+  color: #3b0005;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 28px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6), 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  font-family: inherit;
+  width: 100%;
+}
+
+.welcome-enter-btn:hover {
+  transform: scale(1.04) translateY(-2px);
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.9), 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
 /* Fixed Navigation Bar */
 .top-navbar {
   position: fixed;

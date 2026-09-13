@@ -793,19 +793,35 @@ body.lang-hi .side-kids-label {
   color: inherit;
 }
 
-.clickable-phone-card {
+.clickable-phone-card,
+.clickable-map-card {
   cursor: pointer;
 }
 
-.clickable-phone-card:hover .contact-icon-ring {
+.clickable-phone-card:hover .contact-icon-ring,
+.clickable-map-card:hover .contact-icon-ring {
   background: var(--gold-gradient);
   color: #3b0005;
   box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
   transform: scale(1.1);
 }
 
-.clickable-phone-card:hover .contact-val {
+.clickable-phone-card:hover .contact-val,
+.clickable-map-card:hover .contact-val {
   color: var(--gold-2);
+}
+
+.clickable-venue-item {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.clickable-venue-item:hover .detail-icon-box {
+  background: var(--gold-gradient);
+  color: #3b0005;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  transform: scale(1.08);
 }
 
 .contact-card-item:hover {

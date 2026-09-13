@@ -51,8 +51,8 @@ body.lang-mr, body.lang-hi {
 
 body.lang-mr h1, body.lang-mr h2, body.lang-mr h3, body.lang-mr .gold-title,
 body.lang-hi h1, body.lang-hi h2, body.lang-hi h3, body.lang-hi .gold-title {
-  font-family: 'Yatra One', var(--font-devanagari), cursive;
-  letter-spacing: 0.5px;
+  font-family: 'Mukta', 'Noto Sans Devanagari', 'Tiro Devanagari Marathi', sans-serif;
+  letter-spacing: normal;
 }
 
 /* Canvas Background for floating festive particles */
@@ -363,24 +363,28 @@ section {
 .side-kids-label {
   position: relative;
   z-index: 3;
-  margin-top: 10px;
-  background: rgba(30, 2, 6, 0.85);
-  border: 1px solid var(--gold-3);
-  border-radius: 20px;
-  padding: 5px 14px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  font-family: inherit;
-  font-size: 0.92rem;
-  font-weight: 600;
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin-top: 12px;
+  background: rgba(45, 4, 10, 0.92);
+  border: 1.5px solid var(--gold-2);
+  border-radius: 50px;
+  padding: 6px 18px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6), inset 0 0 10px rgba(212, 175, 55, 0.15);
+  font-family: 'Mukta', 'Noto Sans Devanagari', 'Tiro Devanagari Marathi', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gold-2);
+  letter-spacing: normal;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
 }
 
 body.lang-mr .side-kids-label,
 body.lang-hi .side-kids-label {
-  font-family: 'Yatra One', var(--font-devanagari), cursive;
+  font-family: 'Mukta', 'Noto Sans Devanagari', 'Tiro Devanagari Marathi', sans-serif;
+  letter-spacing: normal;
 }
 
 /* Center Idol Container */
@@ -477,7 +481,7 @@ body.lang-hi .side-kids-label {
   font-size: 1.2em;
   display: block;
   margin-top: 6px;
-  letter-spacing: 0.5px;
+  letter-spacing: normal;
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 

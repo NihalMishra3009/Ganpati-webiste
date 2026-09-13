@@ -49,7 +49,7 @@ const translations = {
     contactTitle: "संपर्क आणि पत्ता",
     contactSub: "काही अडचण असल्यास कृपया संपर्क साधावा",
     hostLabel: "निमंत्रक",
-    hostPerson: "श्रीजा जयदीप पवार आणि श्रीजय जयदीप पवार",
+    hostPerson: "श्रीजा & श्रीजय (पवार परिवार)",
     phoneLabel: "संपर्क क्रमांक",
     addressLabel: "पत्ता",
     addressShortVal: "सेक्टर १६, रोडपाली, कळंबोली",

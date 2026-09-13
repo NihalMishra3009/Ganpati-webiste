@@ -321,7 +321,7 @@ section {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 220px;
+  width: 270px;
 }
 
 .side-kids-glow {
@@ -329,8 +329,8 @@ section {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   background: radial-gradient(circle, rgba(255, 215, 0, 0.35) 0%, rgba(220, 20, 60, 0.15) 50%, transparent 75%);
   border-radius: 50%;
   filter: blur(20px);
@@ -342,7 +342,7 @@ section {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 330px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1181,16 +1181,16 @@ footer {
   }
 
   .side-kids-container {
-    width: 140px;
+    width: 165px;
   }
 
   .side-kids-wrapper {
-    height: 220px;
+    height: 260px;
   }
 
   .side-kids-glow {
-    width: 140px;
-    height: 140px;
+    width: 165px;
+    height: 165px;
   }
 
   .side-kids-label {

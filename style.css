@@ -965,6 +965,15 @@ body.lang-hi .side-kids-label {
   word-break: break-word;
 }
 
+.address-card-text {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--gold-1);
+  font-weight: 500;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
 a.contact-val:hover {
   color: var(--gold-2);
   text-decoration: underline;

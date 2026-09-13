@@ -788,6 +788,26 @@ body.lang-hi .side-kids-label {
   letter-spacing: 0.5px;
 }
 
+.contact-card-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.clickable-phone-card {
+  cursor: pointer;
+}
+
+.clickable-phone-card:hover .contact-icon-ring {
+  background: var(--gold-gradient);
+  color: #3b0005;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+  transform: scale(1.1);
+}
+
+.clickable-phone-card:hover .contact-val {
+  color: var(--gold-2);
+}
+
 .contact-card-item:hover {
   background: rgba(45, 3, 9, 0.6);
   border-color: var(--gold-2);
